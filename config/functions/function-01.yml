@@ -4,6 +4,8 @@ function:
   handler: src/function-01/index.handler
   memorySize: 2048
   timeout: 900
+  tags:
+  Name : Function-Name  
   layers:
     - !Ref NodeModulesLambdaLayer
   package:

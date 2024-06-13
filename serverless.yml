@@ -6,6 +6,10 @@ provider:
   stage: ${opt:stage, 'dev'}
   versionFunctions: false
   runtime: nodejs20.x
+  stackTags:
+    Application: #application name
+    CreateBy: BizCloudExperts
+    Environment: ${self:provider.stage}  
   vpc:
     securityGroupIds:
       - ${ssm:/omni-dw/${self:provider.stage}/lambda/sgId}
